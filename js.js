@@ -39,24 +39,6 @@ jQuery("#video").tubeplayer({
 });
 
 });
-var refreshRate = 7000;
-var slogan;
-var oldSlogan;
-var auto_refresh = setInterval(
-function() {
-  $.get('slogan.php', function(data){slogan = data;})
-  oldSlogan = $('#slogan span').html();
-  if (slogan != oldSlogan) {
-    console.log(slogan);
-    $('#slogan span').fadeOut('slow', function(){
-      $('#slogan span').html(slogan).fadeIn('slow');
-    });
-    refreshRate = 7000;
-  }
-  else {
-    refreshRate = 500;
-  }
-}, refreshRate);
 
 $(function(){
 $(".popup").colorbox({href: function(){
@@ -64,3 +46,24 @@ $(".popup").colorbox({href: function(){
   return 'video.php?ytid='+ytid;
 },transition:"none",scrolling:false});
 });
+
+// slogan stuff
+var slogans;
+$.get('http://cors.io/?u=http://nquake.com/slogans.txt', function(response) {
+  slogans = response.split('\n');
+  showRandomSlogan();
+})
+
+function getRandomSlogan() {
+  return slogans[Math.floor(Math.random() * slogans.length)];
+}
+
+function showRandomSlogan(slogan) {
+  $('#slogan span').html(getRandomSlogan()).fadeIn('slow');
+}
+
+setInterval(function(){
+  $('#slogan span').fadeOut('slow', function(){
+    showRandomSlogan();
+  });
+}, 7000);
