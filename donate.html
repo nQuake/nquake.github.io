@@ -1,12 +1,3 @@
-<?php
-$f_contents = file("slogans.txt");
-$slogan = $f_contents[array_rand($f_contents)];
-// determine operating system
-$u_agent = $_SERVER['HTTP_USER_AGENT'];
-if (preg_match('/linux/i', $u_agent)) $platform = 'linux';
-elseif (preg_match('/macintosh|mac os x/i', $u_agent)) $platform = 'mac';
-elseif (preg_match('/windows|win32/i', $u_agent)) $platform = 'windows';
-?>
 <!doctype html>
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
@@ -29,7 +20,7 @@ elseif (preg_match('/windows|win32/i', $u_agent)) $platform = 'windows';
 <link rel="stylesheet" href="colorbox.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
-<link rel="styleSheet" type="text/css" href="http://www.quakeworld.nu/stylesheets/qwnetbar.css" />
+<link rel="stylesheet" type="text/css" href="http://network.quakeworld.nu/bar/style.css" media="screen" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="jquery.colorbox-min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -58,56 +49,47 @@ elseif (preg_match('/windows|win32/i', $u_agent)) $platform = 'windows';
 
 <div id="qwnetwork">
 	<div id="qwnet_content">
-		<a href="http://nquake.com/" title="nQuake - Download QuakeWorld package today!" id="qwnet_nquake"></a>
-		<a href="http://ezquake.sourceforge.net/" title="ezQuake - The most popular QW client" id="qwnet_ezquake"></a>
-		<a href="http://fodquake.net/" title="Fodquake - Another great QW client" id="qwnet_fodquake"></a>
-
+		<a href="http://nquake.com/" title="nQuake - Download QuakeWorld today!" id="qwnet_nquake" class="qwnet_current"></a>
+		<a href="http://ezquake.sourceforge.net/" title="ezQuake - The best QW client" id="qwnet_ezquake"></a>
 		<div class="qwnet_separator">&nbsp;</div>
-
 		<a href="http://www.quakeworld.nu/" title="QuakeWorld.nu - Your portal to everything Quake" id="qwnet_qwnu"></a>
 		<a href="http://www.quakeworld.nu/forum/" title="QW.nu Forum - Discuss anything QW-related" id="qwnet_forums"></a>
-
+		<a href="http://qwdrama.quakeworld.nu/" title="qwdrama - News, tutorials, interviews, drama and more" id="qwnet_qwdrama"></a>
 		<div class="qwnet_separator">&nbsp;</div>
-
+		<a href="http://showdown.site90.com/?sid=4" title="SD - ShowDown Duel Tournament" id="qwnet_sd"></a>
 		<a href="http://eql.quakeworld.nu/" title="EQL - European Quake Ladder" id="qwnet_eql"></a>
-		<a href="http://draft.quakeworld.nu" title="Salvation - QuakeWorld Draft League" id="qwnet_salvation"></a>
-		<a href="http://www.quakeworld.nu/news/820/hymn-of-hope-is-finally-back/" title="Hymn of Hope - QuakeWorld Cash Tourney" id="qwnet_hoh"></a>
-
+		<a href="http://ownage.qwscene.net/?sid=6" title="Ownage Season 3 - Duel tournament" id="qwnet_ownage"></a>
 		<div class="qwnet_separator">&nbsp;</div>
-
 		<a href="http://wiki.quakeworld.nu/" title="QuakeWorld Wiki - The open QW encyclopedia" id="qwnet_wiki"></a>
 		<a href="http://www.quakeservers.net/quakeworld/servers/pl=1/so=8/" title="QuakeServers.net - QW server listings and info" id="qwnet_quakeservers"></a>
 		<a href="http://stats.quakeworld.nu/" title="QuakeWorld Statistics - QW statistics, ranking systems and more." id="qwnet_stats"></a>
 		<a href="http://qtv.quakeworld.nu/" title="QuakeTV - Watch QW now!" id="qwnet_qtv"></a>
 		<a href="http://goldrush.quakeworld.nu/" title="Goldrush - QuakeWorld betting" id="qwnet_goldrush"></a>
-
 		<div class="qwnet_separator">&nbsp;</div>
-
 		<a href="http://www.challenge-tv.com/index.php?mode=demos&game=2" title="Challenge-TV - Download QW demos" id="qwnet_chtv"></a>
 		<a href="http://videos.quakeworld.nu/" title="QuakeWorld.nu Videos - Watch QW videos, interviews and more" id="qwnet_videos"></a>
 		<a href="http://gfx.quakeworld.nu/" title="QuakeWorld GFX - Download custom graphics" id="qwnet_gfx"></a>
-
 		<div id="qwnet_clearer">&nbsp;</div>
 	</div>
 </div>
 
 <div id="page">
 	<header></header>
-	<div id="slogan"><span><?php echo $slogan?></span></div>
+	<div id="slogan"><span>QuakeWorld - where it all started</span></div>
 	<noscript>
 		<div style="margin:0 auto; width:200px;margin-top: 20px;margin-bottom: 20px;">No trailer without javascript.</div>
 	</noscript>
-	<div id="video-container">
-			<div id="video"></div>
-			<div id="play-button-container" class="play-button-normal" onClick='jQuery("#video").tubeplayer("play",{id:"tjV1J0V4wyA",time:0})'></div>
-			<div id="play-text">Play trailer.</div>
+	<div id="donate-container" >
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="NAVT5P2NJRFHU">
+		<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+		<li><a href="images/receipt-dns-2013-11-02-5-years.png">Receipt for 5 year dns renewal per 2012-11-02</a></li>
+		<li><a href="images/receipt-domain-2013-10-19-5-years.png">Receipt for 5 year domain renewal per 2013-10-19</a></li>
+		<li><a href="images/receipt-2012-08-22-1-year.png">Receipt for 1 year renewal per 2012-08-22</a></li>
 	</div>
-	<div id="download">
-	<a href="https://github.com/nQuake/client-win32/raw/master/releases/nquake_installer-latest.exe" class="btn btn-warning left wider dl" title="Download nQuake" data-content="For <a href='https://github.com/nQuake/client-win32/raw/master/releases/nquake_installer-latest.exe' title='Download nQuake for Windows'>Windows</a>, <a href='https://github.com/nQuake/client-linux/raw/master/releases/nquake_installer-linux-latest.tar.gz' title='Download nQuake for Linux'>Linux</a> and <a href='https://github.com/nQuake/client-macosx/raw/master/releases/nquake_installer-macosx-latest.tar.gz' title='Download nQuake for OS X'>OS X</a>. (client), and <a href='https://github.com/nQuake/server-win32/raw/master/releases/nquakesv_installer-latest.exe' title='Download nQuake server for Windows'>Windows</a> and <a href='https://github.com/nQuake/server-linux/raw/master/releases/nquakesv_installer-linux-latest.tar.gz' title='Download nQuake server for Linux'>Linux</a> (server).">
-	<i class="icon-circle-arrow-down"></i> Download</a>
-<a href="http://nquake.com/online/nqonline.exe" data-content="Play without downloading. Requires <a href='http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html' title='Download Java Runtime Environment'>Java</a>." title="Play nQuake" class="btn btn-success left"><i class="icon-play"></i> Play now</a>
-</div>
-	<div id="below_download" class="clearer"></div>
 	<footer>
 		<div class="footer-col">
 			<ul>
@@ -138,10 +120,9 @@ elseif (preg_match('/windows|win32/i', $u_agent)) $platform = 'windows';
 			<ul>
 				<li class="header">MIRROR PROVIDERS / SPONSORS</li>
 				<li><a href="http://www.sourceforge.net/" title="SourceForge hosts the nQuake website">SourceForge.net</a></li>
-				<li><a href="http://www.quakeservers.net/" title="QuakeServers.net is a mirror provider for nQuake">QuakeServers.net</a></li>
 				<li><a href="http://www.localghost.net/" title="LocalGhost.net is a mirror provider for nQuake">LocalGhost.net</a></li>
 				<li><a href="http://qw.quakephil.com/" title="QuakePhil.com is a mirror provider for nQuake">QuakePhil.com</a></li>
-				<li><a href="http://fnu.nu/" title="Fnu.nu is the mother mirror of nQuake">Fnu.nu</a></li>
+				<li><a href="http://f.nu/" title="F.nu is the mother mirror of nQuake">F.nu</a></li>
 				<li style="margin-top: 4px;"><span class="important_link"><a href="http://sourceforge.net/projects/nquake/forums/forum/702197/topic/3107668" title="Any help is appreciated!">Start an nQuake mirror</a></span></li>
 			</ul>
 		</div>
@@ -149,9 +130,9 @@ elseif (preg_match('/windows|win32/i', $u_agent)) $platform = 'windows';
 			<ul>
 				<li class="header">SOCIAL / CONTRIBUTE</li>
 				<li>&nbsp;</li>
-				<li style="margin-top: -20px;"><a href="http://www.nquake.com/donate.php" target="_blank">Donate money for domain renewals</li>
+				<li style="margin-top: -20px;"><a href="http://www.nquake.com/donate.html" target="_blank">Donate money for domain renewals</li>
 				<li><a href="http://www.facebook.com/nquakeworld" target="_blank">Follow nQuake on Facebook</li>
-				<li><a href="http://www.twitter.com/nquakeworld" target="_blank">Follow nQuake on Twitter</li>
+				<li><a href="http://www.twitter.com/nquakeworld" target="_blank">Follow nQuake on Twitter</a></li>
 				<li style="margin-top: 4px;"><div class="fb-like" data-href="http://www.nquake.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-colorscheme="dark"></div></li>
 				<li style="margin-top: 4px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="www.nquake.com" data-text="Check out nQuake, the simplest way to start playing QuakeWorld!" data-hashtags="gaming">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
