@@ -21,6 +21,7 @@ jQuery("#video").tubeplayer({
   showControls: 0,
   iframed: true,
   start: 1,
+  protocol: 'https',
   modestbranding: true,
   onPlay: function(id){$('#video').tubeplayer('seek',1)}, // after the play method is called
   onPause: function(){}, // after the pause method is called
