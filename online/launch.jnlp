@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="http://nquake.com/online/" href="launch.jnlp">
+    <information>
+        <title>nQuake</title>
+        <vendor>nQuake.com</vendor>
+        <description>Play QuakeWorld instantly!</description>
+        <homepage href="http://nquake.com/" />
+        <icon href="nquake.ico" />
+        <offline-allowed />
+        <shortcut>
+            <desktop />
+        </shortcut>
+    </information>
+    <update check="background" />
+    <security>
+        <all-permissions />
+    </security>
+    <resources>
+        <j2se version="1.6+" />
+        <jar href="nquake-launcher.jar" main="true" />
+    </resources>
+    <application-desc main-class="com.nquake.launcher.Launcher" />
+</jnlp>

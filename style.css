@@ -1,0 +1,197 @@
+body
+{
+  font-family: "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+  color:#959595;
+  background: #333 url(images/background.png) repeat top center;
+  margin: 0px;
+}
+
+#page
+{
+  padding-top: 10px;
+  text-align: center;
+}
+
+header
+{
+	background: transparent url(images/logo.png) no-repeat top left;
+	height: 138px;
+	width: 333px;
+	margin: 0 auto;
+}
+
+.line
+{
+	background: transparent url(images/line.png) no-repeat top left;
+	height: 1px;
+	width: 587px;
+    margin: 0 auto;
+}
+
+#slogan
+{
+	font-family: 'Playball', cursive;
+	color: #fff;
+	margin: 0 auto;
+	width: 720px;
+	font-size: 2em;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 8px;
+	min-height: 45px;
+	display: block;
+}
+
+#donate-container
+{
+	width: 854px;
+	height: 480px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid transparent;
+}
+
+#video-container
+{
+	width: 854px;
+	height: 480px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid transparent;
+	display: none;
+}
+
+#video
+{
+	margin-top: 80px;
+	width: 854px;
+	height: 0px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid transparent;
+	overflow: hidden;
+}
+
+#play-button-container
+{
+	width: 254px;
+	height: 254px;
+	cursor: pointer;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+.play-button-normal 
+{
+	background: transparent url(images/play.png) no-repeat top center;
+}
+.play-button-hover
+{
+	background: transparent url(images/play_hover.png) no-repeat top center;
+}
+
+.play-button-click
+{
+	background: transparent url(images/play_click.png) no-repeat top center;
+}
+#play-text
+{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.5em;
+	color: #fff;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 150px;
+	text-align: center;
+}
+
+#download
+{
+	/* width: 325px; */
+	display: inline-block;
+	width: auto;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#below_download
+{
+	font-family: "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+	font-size: 9pt;
+	height: 10px;
+	width: 299px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 0px;
+}
+
+#below_download a
+{
+	color: #FFD930;
+}
+
+footer
+{
+	border-top: 1px dashed #888;
+	width: 860px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: left;
+}
+
+footer a
+{
+	color: #999;
+	text-decoration: none;
+}
+
+footer a:hover
+{
+	color:#888;
+}
+
+.footer-col
+{
+	font-family: "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+	font-size: 8pt;
+	float: left;
+	min-width: 160px;
+	margin: 0px 20px 20px 0px;
+}
+
+.footer-col ul li
+{
+	list-style: none;
+	font-size: 11px;
+	padding: 0;
+}
+.footer-col ul li.header
+{
+	font-weight: bold;
+	color: #787878;
+	margin-left: -5px;
+}
+
+.hidden
+{
+	display: none;
+}
+a.btn {
+	text-decoration: none;
+	color: black;
+	margin: 0 auto;
+	margin-right: 5px;
+	width: 130px;
+}
+a.btn:hover {
+	color: black;
+}
+.btn>.i {
+	line-height: 0;
+	margin-top: 6px;
+}
+.left {
+	float: left;
+}
+.clearer {
+	clear: both;
+}

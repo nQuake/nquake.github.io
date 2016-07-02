@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteRule ^([a-z]+)/([a-f0-9]+).jnlp$ /online/jnlp.php?type=$1&server=$2
+RewriteRule ^([a-z]+)/(.+)$ /online/encode.php?type=$1&server=$2
