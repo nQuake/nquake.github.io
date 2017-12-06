@@ -41,9 +41,9 @@ jQuery("#video").tubeplayer({
 });
 
 $(function(){
-$(".popup").colorbox({href: function(){
+$(".popup").colorbox({html: function(){
   var ytid = $(this).attr('ytid');
-  return 'video.php?ytid='+ytid;
+  return '<iframe width="640" height="360" src="http://www.youtube.com/embed/'+ ytid +'" frameborder="0" allowfullscreen></iframe>';
 },transition:"none",scrolling:false});
 });
 
