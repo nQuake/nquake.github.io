@@ -49,10 +49,23 @@ $(".popup").colorbox({html: function(){
 
 // slogan stuff
 var slogans;
-$.get('http://cors.io/?u=http://nquake.com/slogans.txt', function(response) {
-  slogans = response.split('\n');
-  showRandomSlogan();
-})
+
+slogans = [
+  'Makes zerg rush look like snails on sedatives',
+  'The first and fastest eSports game',
+  'Built on pure skills since 1996',
+  'QuakeWorld - where it all started',
+  'Back to the roots',
+  'Level yourself, not some stupid MMORPG character!',
+  'Adrenaline shots since 1996',
+  'Take control of the game',
+  'Action. Speed. Satisfaction.',
+  'Not for the faint of heart',
+  'Be quick or be dead',
+  'Still the best action shooter'
+]
+showRandomSlogan();
+
 
 function getRandomSlogan() {
   return slogans[Math.floor(Math.random() * slogans.length)];
