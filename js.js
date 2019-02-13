@@ -38,6 +38,17 @@ jQuery("#video").tubeplayer({
   onQualityChange: function(quality){}, // a function callback for when the quality of a video is determined
 });
 
+  //os detection and download link update
+  var downloadLink = $('#download-link');
+  var currentPlatform = navigator.platform;
+  if (currentPlatform.indexOf('Win') == 0) {
+      //no change needed
+  } else if (currentPlatform.indexOf('Mac') == 0) {
+      downloadLink.attr('href', downloadLink.data('link-osx'));
+  } else {
+      downloadLink.attr('href', downloadLink.data('link-linux'));
+  }
+
 });
 
 $(function(){
