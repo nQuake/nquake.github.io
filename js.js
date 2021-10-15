@@ -62,12 +62,13 @@ $(".popup").colorbox({html: function(){
 var slogans;
 
 slogans = [
-  'Makes zerg rush look like snails on sedatives',
+  'QuakeWorld will always be around',
+  'Decades of history and counting',
   'The first and fastest eSports game',
   'Built on pure skills since 1996',
   'QuakeWorld - where it all started',
   'Back to the roots',
-  'Level yourself, not some stupid MMORPG character!',
+  'Level yourself, not some virtual character!',
   'Adrenaline shots since 1996',
   'Take control of the game',
   'Action. Speed. Satisfaction.',
