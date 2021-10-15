@@ -37,7 +37,7 @@ header
 	font-size: 2em;
 	text-align: center;
 	margin-top: 5px;
-	margin-bottom: 8px;
+	margin-bottom: -12px;
 	min-height: 45px;
 	display: block;
 }
@@ -80,7 +80,7 @@ header
 	margin: 0 auto;
 	margin-top: 80px;
 }
-.play-button-normal 
+.play-button-normal
 {
 	background: transparent url(images/play.png) no-repeat top center;
 }
@@ -110,7 +110,7 @@ header
 	display: inline-block;
 	width: auto;
 	text-align: center;
-	margin: 0 auto;
+	margin: 1em auto 0 auto;
 }
 
 #below_download
@@ -134,7 +134,7 @@ footer
 	border-top: 1px dashed #888;
 	width: 1035px;
 	margin: 0 auto;
-	margin-top: 30px;
+	margin-top: 0px;
 	text-align: left;
 }
 
@@ -155,7 +155,7 @@ footer a:hover
 	font-size: 8pt;
 	float: left;
 	min-width: 160px;
-	margin: 0px 20px 20px 0px;
+	margin: 0px 20px 0px 0px;
 }
 
 .footer-col ul li

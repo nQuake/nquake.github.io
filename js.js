@@ -15,10 +15,10 @@ $(document).ready(function(){
 jQuery("#video").tubeplayer({
   width: 854, // the width of the player
   height: 480, // the height of the player
-  allowFullScreen: "false", // true by default, allow user to go full screen
+  allowFullScreen: "true", // true by default, allow user to go full screen
   initialVideo: "4FJTfE9YdUU",//"8H71cJXrzak", // the video that is loaded into the player
   preferredQuality: "large",// preferred quality: default, small, medium, large, hd720
-  showControls: 0,
+  showControls: 1,
   iframed: true,
   start: 1,
   protocol: 'https',
